@@ -10,7 +10,7 @@ for(int i=0; i<word.length()-1; i++)
       word.Substring(i+1,1).equals("A");
     }
     //if the letter at num i isnt A and the letter at num i+1 is A
-  if(!word.Substring(i,1).equals("A") && word.Substring(i+1,1).equals("A"))
+  else if(!word.Substring(i,1).equals("A") && word.Substring(i+1,1).equals("A"))
     {
       //swap places
       word.Substring(i+1,1).equals(word.Substring(i,1));
