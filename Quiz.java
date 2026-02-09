@@ -6,10 +6,17 @@ for(int i=0; i<word.length()-1; i++)
   if(word.Substring(i,1).equals("A") && !word.Substring(i+1,1).equals("A"))
     {
       //swap places
-      word.Substring(i,1)=word.Substring(i+1,1);
-      word.Substring(i+1,1)="A";
+      word.Substring(i,1).equals(word.Substring(i+1,1));
+      word.Substring(i+1,1).equals("A");
     }
-  //if, if statement failed go to next letter
+    //if the letter at num i isnt A and the letter at num i+1 is A
+  if(!word.Substring(i,1).equals("A") && word.Substring(i+1,1).equals("A"))
+    {
+      //swap places
+      word.Substring(i+1,1).equals(word.Substring(i,1));
+      word.Substring(i,1).equals("A");
+    }
+  //if both if statements failed go to the next letter
   else i+1;
 }
 return word;
